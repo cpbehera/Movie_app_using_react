@@ -1,0 +1,35 @@
+.cards{
+    /* border: 1px solid red; */
+    padding: 10px 20px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    /* border: 1px solid blue; */
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.5s ease;
+}
+.card:hover{
+    transform: scale(1.01);
+}
+span{
+    font-size: 14px;
+}
+button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    cursor: pointer;
+    background-color: rgb(120, 144, 221);
+    color: rgb(255, 255, 255);
+    transition: all 0.2s ease;
+}
+button:hover{
+    background-color: rgb(97, 122, 204);
+}
