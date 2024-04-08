@@ -34,6 +34,12 @@ const moviesData = [
         imgsrc : 'https://m.media-amazon.com/images/M/MV5BOGZlNjAzMzgtOTY0Ny00YzdiLWEyNGYtODJlMGM1MTE4ZmMwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg',
         title : 'Kathal-A Jackfruit Mystery',
         link : 'https://downloadhub.tips/kathal-a-jackfruit-mystery-2023-full-hindi-movie-download-hdrip/'
+    },
+    {
+        id : 6,
+        imgsrc : 'https://m.media-amazon.com/images/M/MV5BOGZlNjAzMzgtOTY0Ny00YzdiLWEyNGYtODJlMGM1MTE4ZmMwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg',
+        title : 'Kathal-A Jackfruit Mystery',
+        link : 'https://downloadhub.tips/kathal-a-jackfruit-mystery-2023-full-hindi-movie-download-hdrip/'
     }
 ];
 
