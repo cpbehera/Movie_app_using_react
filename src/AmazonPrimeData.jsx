@@ -34,6 +34,12 @@ const amazonPrimeData = [
         imgsrc : 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTdIHqMpE19LQNNu_zU5nRNyIVmdYiEeSdK1Wu2LJNJYR2gHBRx',
         title : 'Satyaprem Ki Katha',
         link : 'https://downloadhub.meme/satyaprem-ki-katha-2023-hindi-hdrip-full-movie/'
+    },
+    {
+        id : 7,
+        imgsrc : 'https://m.media-amazon.com/images/M/MV5BZDhjYmUzZGEtOWIyYi00ZDgzLWEwNmQtZGI4MjdhMDg1YTQ4XkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_FMjpg_UX1000_.jpg',
+        title : 'Mast Mein Rehne Ka',
+        link : 'https://downloadhub.meme/mast-mein-rehne-ka-2023-full-hindi-movie-download-hdrip/'
     }
 ];
 
