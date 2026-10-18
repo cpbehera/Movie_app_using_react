@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+.movies {
+  --mv-ink: #12161f;
+  --mv-soft: #5a6272;
+  --mv-line: #e2e5eb;
+  --mv-amber: #f5b83d;
+  --mv-amber-ink: #1b1303;
+
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+  background-color: #f5f6f8;
+  color: var(--mv-ink);
+  font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* Responsive grid of small cards */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.1rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Card */
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--mv-line);
+  border-radius: 14px;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.movie-card:hover {
+  border-color: #c9cfda;
+  box-shadow: 0 8px 22px rgba(18, 22, 31, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Poster */
+.movie-poster {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  background-color: #eceff5;
+}
+.movie-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.movie-card:hover .movie-img {
+  transform: scale(1.05);
+}
+.movie-category {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  max-width: calc(100% - 1rem);
+  padding: 0.22rem 0.6rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background-color: rgba(18, 22, 31, 0.78);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Info */
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 0.6rem;
+  padding: 0.7rem 0.75rem 0.8rem;
+}
+.movie-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.6em;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* Button (the link is styled as the button) */
+.movie-btn {
+  display: block;
+  margin-top: auto;
+  padding: 0.45rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--mv-amber);
+  color: var(--mv-amber-ink);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+.movie-btn:hover {
+  background-color: #ffc95c;
+  color: var(--mv-amber-ink);
+}
+.movie-btn:active {
+  background-color: #e7a82a;
+}
+.movie-btn:focus-visible {
+  outline: 3px solid var(--mv-ink);
+  outline-offset: 2px;
+}
+
+@media (max-width: 479.98px) {
+  .movies {
+    padding-top: 1.25rem;
+  }
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .movie-card,
+  .movie-img,
+  .movie-btn { transition: none; }
+  .movie-card:hover { transform: none; }
+  .movie-card:hover .movie-img { transform: none; }
+}
