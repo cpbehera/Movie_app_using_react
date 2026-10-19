@@ -7,7 +7,7 @@ function MoviesWrapper(){
       <>
       <section className='movies'>
         <div className='movies-grid'>
-           {moviesData.map((movie) => (
+           {moviesData.slice().reverse().map((movie) => (
             <article key={movie.id} className='movie-card'>
               <div className='movie-poster'>
                 <img src={movie.imgsrc} alt={movie.title} className='movie-img' loading='lazy' />
