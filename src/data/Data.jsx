@@ -55,6 +55,13 @@ const moviesData = [
         title: 'Maaveeran (2023) (Hindi + Tamil) Dual Audio UnCut South Movie HD ESub',
         link: 'https://10moviesz.mom/?id=33d8a23f'
     },
+    {
+        id: 9,
+        category: 'Odia',
+        imgsrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnstOvhOw1Vj7glgTTOApCO-yiIgKSE9-thfP0ZfmNAw&s=10',
+        title: 'Mantra Muugdha 2026 Odia Audio',
+        link: 'https://fast-dl.one/dl/1c5948'
+    },
     
 ];
 
