@@ -95,6 +95,54 @@ const moviesData = [
         link: 'https://fast-dl.one/dl/14758d',
         publishedDate: '20-10-26'
     },
+    {
+        id: 13,
+        category: 'hollywood',
+        imgsrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToMrcH5FsdoR2rEH52HrMblds20THcO3PRGHhW09NFK__jB-_czjsxujA&s=10',
+        title: 'Devil in Dune 2021 Hindi Dual Audio',
+        link: 'https://fast-dl.one/dl/73b56b',
+        publishedDate: '20-10-26'
+    },
+    {
+        id: 14,
+        category: 'south-hindi-dubbed',
+        imgsrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTloA-HQ5qys43a_puoqFTXgXFi_i39g-ilZ6EqpiSA87nEGg6SFV1mpGU&s=10',
+        title: 'Churuli 2021 Hindi - Malayalam Dual Audio',
+        link: 'https://fast-dl.one/dl/320af5',
+        publishedDate: '20-10-26'
+    },
+    {
+        id: 15,
+        category: 'hollywood',
+        imgsrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIz3dI7Kea-nN3DyYX4Hy9Hx4IvGOTXkKRj09_27E-YA&s',
+        title: 'Street Fighter 2026 V2 Hindi - Telugu (CLEAN) & English ORG',
+        link: 'https://fast-dl.one/dl/44c383',
+        publishedDate: '21-10-26'
+    },
+    {
+        id: 15,
+        category: 'bollywood',
+        imgsrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST4PbpWkK6hz4TYcuiUNHCMODMCxsNFcReuanbmgXkOI6d10oApvW553kG&s=10',
+        title: 'Jaaiye Aap Kahan Jaayenge 2025 Hindi Dual Audio',
+        link: 'https://fast-dl.one/dl/34166a',
+        publishedDate: '21-10-26'
+    },
+    {
+        id: 16,
+        category: 'Odia',
+        imgsrc: 'https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/memshab-et00491790-1773728813.jpg',
+        title: 'Memsaab 2026 Odia Audio',
+        link: 'https://fast-dl.one/dl/99bd9a',
+        publishedDate: '21-10-26'
+    },
+    {
+        id: 17,
+        category: 'south-hindi-dubbed',
+        imgsrc: 'https://m.media-amazon.com/images/M/MV5BZDIzMjA3NDEtMjIxOS00MWUyLWI0NTAtNmY1NzAzZDNkNDcyXkEyXkFqcGc@._V1_.jpg',
+        title: 'Rekhachithram 2025 Hindi Dual Audio',
+        link: 'http://fast-dl.one/dl/5dea78',
+        publishedDate: '21-10-26'
+    },
     
 ];
 

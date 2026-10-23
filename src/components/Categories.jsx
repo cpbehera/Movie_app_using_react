@@ -1,23 +1,32 @@
 import moviesData from '../data/Data'
 
-function Categories() {
+function Categories({seletedCategory, selectedCategory, setSelectedCategory}) {
 
-  const uniqueCategories = [];
+  // Supports both spellings of the prop name
+  const current = selectedCategory ?? seletedCategory
 
-  moviesData.forEach((movie) => {
-    if (!uniqueCategories.includes(movie.category)) {
-      uniqueCategories.push(movie.category);
-    }
-  });
+  const categories = [
+    'all',
+    ...new Set(moviesData.map((movie) => movie.category.toLowerCase()))
+  ]
 
   return (
     <nav className="cats" aria-label="Movie categories">
       <div className="cats-inner">
-        {uniqueCategories.map((category, index) => (
-          <a key={index} href={`/categories/${category}`} className="cats-link">
-            {category.replaceAll('-', ' ').toUpperCase()}
-          </a>
-        ))}
+        {categories.map((category) => {
+          const isActive = category === current
+          return (
+            <button
+              key={category}
+              type='button'
+              className={`cats-link${isActive ? ' is-active' : ''}`}
+              aria-pressed={isActive}
+              onClick={()=>setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          )
+        })}
       </div>
 
       {/* Scoped styles */}
@@ -34,7 +43,6 @@ function Categories() {
         .cats-inner {
           display: flex;
           align-items: center;
-          justify-content: center;
           gap: 0.6rem;
           max-width: 1140px;
           margin: 0 auto;
@@ -45,6 +53,9 @@ function Categories() {
         .cats-inner::-webkit-scrollbar {
           display: none;
         }
+        /* Centers the row when it fits, but still scrolls from the start when it doesn't */
+        .cats-inner > :first-child { margin-left: auto; }
+        .cats-inner > :last-child { margin-right: auto; }
 
         .cats .cats-link {
           flex: 0 0 auto;
@@ -53,24 +64,31 @@ function Categories() {
           border-radius: 999px;
           background-color: #fff;
           color: var(--ct-ink);
+          font-family: inherit;
           font-size: 0.95rem;
           font-weight: 500;
           line-height: 1.2;
-          text-decoration: none;
+          text-transform: capitalize;
           white-space: nowrap;
+          cursor: pointer;
           transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
         }
         .cats .cats-link:hover {
           border-color: var(--ct-ink);
-          background-color: var(--ct-ink);
-          color: #fff;
-        }
-        .cats .cats-link:active {
-          background-color: #262c3a;
+          background-color: #f3f4f7;
         }
         .cats .cats-link:focus-visible {
           outline: 3px solid var(--ct-amber);
           outline-offset: 2px;
+        }
+
+        /* Selected category */
+        .cats .cats-link.is-active,
+        .cats .cats-link.is-active:hover {
+          border-color: var(--ct-ink);
+          background-color: var(--ct-ink);
+          color: #fff;
+          font-weight: 600;
         }
 
         @media (prefers-reduced-motion: reduce) {

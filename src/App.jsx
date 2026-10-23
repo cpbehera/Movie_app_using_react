@@ -1,4 +1,5 @@
-import React from 'react';
+import { useState } from 'react';
+
 import Navbar from './components/Navbar';
 import Categories from './components/Categories';
 import MoviesWrapper from './components/MoviesWrapper';
@@ -6,11 +7,13 @@ import Footer from './components/Footer';
 
 
 const App = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+
     return (
         <>
             <Navbar />
-            <Categories />
-            <MoviesWrapper />
+            <Categories selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+            <MoviesWrapper selectedCategory={selectedCategory} />
             <Footer />
         </>
     )

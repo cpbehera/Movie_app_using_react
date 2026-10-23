@@ -1,13 +1,18 @@
 import './MoviesWrapper.css';
 import moviesData from '../data/Data';
 
-function MoviesWrapper(){
+function MoviesWrapper({selectedCategory}){
+  const filteredMovies = selectedCategory === 'all' ?
+    moviesData : 
+    moviesData.filter((movie) =>{
+      return movie.category.toLowerCase() === selectedCategory
+    })
     
     return(
       <>
       <section className='movies'>
         <div className='movies-grid'>
-           {moviesData.slice().reverse().map((movie) => (
+           {filteredMovies.slice().reverse().map((movie) => (
             <article key={movie.id} className='movie-card'>
               <div className='movie-poster'>
                 <img src={movie.imgsrc} alt={movie.title} className='movie-img' loading='lazy' />
